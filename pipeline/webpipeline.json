@@ -1,0 +1,30 @@
+{
+	"name": "webpipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "Web1",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Employee Rest API",
+						"value": "API"
+					}
+				],
+				"typeProperties": {
+					"url": "http://dummy.restapiexample.com/api/v1/employees",
+					"method": "GET"
+				}
+			}
+		],
+		"annotations": []
+	}
+}
